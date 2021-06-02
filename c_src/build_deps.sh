@@ -57,7 +57,7 @@ case "$1" in
     get-deps)
         if [ ! -d leveldb ]; then
             git clone https://github.com/nakkapeddi-merigo/leveldb
-            (cd leveldb && git checkout $LEVELDB_VSN-aarch64)
+            (cd leveldb && git checkout 54506b77daa3d4497253da62586e374075bf1db7)
             (cd leveldb && git submodule update --init)
         fi
         ;;
@@ -89,8 +89,8 @@ case "$1" in
         export LEVELDB_VSN="$LEVELDB_VSN"
 
         if [ ! -d leveldb ]; then
-            git clone https://github.com/basho/leveldb
-            (cd leveldb && git checkout $LEVELDB_VSN)
+            git clone https://github.com/nakkapeddi-merigo/leveldb
+            (cd leveldb && git checkout 54506b77daa3d4497253da62586e374075bf1db7)
             (cd leveldb && git submodule update --init)
         fi
 
