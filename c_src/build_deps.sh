@@ -56,8 +56,8 @@ case "$1" in
 
     get-deps)
         if [ ! -d leveldb ]; then
-            git clone https://github.com/basho/leveldb
-            (cd leveldb && git checkout $LEVELDB_VSN)
+            git clone https://github.com/nakkapeddi-merigo/leveldb
+            (cd leveldb && git checkout $LEVELDB_VSN-aarch64)
             (cd leveldb && git submodule update --init)
         fi
         ;;
